@@ -4,7 +4,7 @@ public class PagoCuentaDebito extends MetodoPago {
     @Override
     public void procesarPago(double monto) throws PagoInvalidoException {
         if (monto > SALDO_DISPONIBLE) {
-            throw new PagoInvalidoException("Saldo insuficiente en la cuenta de débito");
+            throw new PagoInvalidoException("Saldo insuficiente en cuenta de débito");
         }
 
         System.out.println("Pago con débito aprobado por $" + monto);
